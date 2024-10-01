@@ -1,6 +1,4 @@
 import React from "react";
-// importing aos
-import AOS from "aos";
 import "aos/dist/aos.css";
 import HighlightText from "../../../components/core/HomePage/HighlightText";
 import CTAButton from "../../../components/core/HomePage/Button";
@@ -49,13 +47,13 @@ const LearningGridArray = [
 
 const LearningGrid = () => {
   return (
-    <div className='grid mx-auto w-[350px] xl:w-fit grid-cols-1 xl:grid-cols-4 mb-12'>
+    <div className="grid mx-auto w-[350px] xl:w-fit grid-cols-1 xl:grid-cols-4 mb-12">
       {LearningGridArray.map((card, i) => {
         return (
           <div
-            data-aos='flip-up'
-            data-aos-duration='500'
-            data-aos-offset='100'
+            data-aos="flip-up"
+            data-aos-duration="500"
+            data-aos-offset="100"
             key={i}
             className={`${i === 0 && "xl:col-span-2 xl:h-[294px]"}  ${
               card.order % 2 === 1
@@ -67,20 +65,20 @@ const LearningGrid = () => {
           >
             {card.order < 0 ? (
               <div
-                data-aos='flip-left'
-                data-aos-duration='500'
-                data-aos-offset='100'
-                className='xl:w-[90%] flex flex-col gap-3 pb-10 xl:pb-0'
+                data-aos="flip-left"
+                data-aos-duration="500"
+                data-aos-offset="100"
+                className="xl:w-[90%] flex flex-col gap-3 pb-10 xl:pb-0"
               >
-                <div className='text-4xl font-semibold '>
+                <div className="text-4xl font-semibold ">
                   {card.heading}
                   <HighlightText text={card.highlightText} />
                 </div>
-                <p className='text-richblack-300 font-medium'>
+                <p className="text-richblack-300 font-medium">
                   {card.description}
                 </p>
 
-                <div className='w-fit mt-2'>
+                <div className="w-fit mt-2">
                   <CTAButton active={true} linkto={card.BtnLink}>
                     {card.BtnText}
                   </CTAButton>
@@ -88,14 +86,14 @@ const LearningGrid = () => {
               </div>
             ) : (
               <div
-                className='p-8 flex flex-col gap-8'
-                data-aos='flip-right'
-                data-aos-duration='500'
-                data-aos-offset='100'
+                className="p-8 flex flex-col gap-8"
+                data-aos="flip-right"
+                data-aos-duration="500"
+                data-aos-offset="100"
               >
-                <h1 className='text-richblack-5 text-lg'>{card.heading}</h1>
+                <h1 className="text-richblack-5 text-lg">{card.heading}</h1>
 
-                <p className='text-richblack-300 font-medium'>
+                <p className="text-richblack-300 font-medium">
                   {card.description}
                 </p>
               </div>

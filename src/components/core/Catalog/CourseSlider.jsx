@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-import { Autoplay, FreeMode, Navigation, Pagination } from "swiper";
+import { FreeMode, Pagination } from "swiper";
 
 import Course_Card from "./Course_Card";
 
@@ -23,7 +23,7 @@ const CourseSlider = ({ Courses }) => {
               slidesPerView: 3,
             },
           }}
-          className='max-h-[30rem] mx-auto'
+          className="max-h-[30rem] mx-auto"
         >
           {Courses?.map((course, i) => (
             <SwiperSlide key={i}>
@@ -35,7 +35,7 @@ const CourseSlider = ({ Courses }) => {
           ))}
         </Swiper>
       ) : (
-        <p className='text-xl text-richblack-5'>No Course Found</p>
+        <p className="text-xl text-richblack-5">No Course Found</p>
       )}
     </>
   );
