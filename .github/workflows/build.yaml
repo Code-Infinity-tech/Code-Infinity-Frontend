@@ -3,6 +3,9 @@ name: Build Succeds on PR
 on:
   pull_request:
     branches:
+      - master
+  push:
+    branches:
       - main
 
 jobs:
