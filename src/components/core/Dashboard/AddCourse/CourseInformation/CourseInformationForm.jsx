@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
-import { MdNavigateNext } from "react-icons/md"
-import IconBtn from "../../../../common/IconBtn"
+import { MdNavigateNext } from "react-icons/md";
 import {
   addCourseDetails,
   editCourseDetails,
   fetchCourseCategories,
 } from "../../../../../services/operations/courseDetailsAPI";
 import { HiOutlineCurrencyRupee } from "react-icons/hi";
-import { BiUpload } from "react-icons/bi";
 import RequirementField from "./RequirementField";
 import { setStep, setCourse } from "../../../../../slices/courseSlice";
 import { COURSE_STATUS } from "../../../../../utils/constants";
@@ -18,7 +16,6 @@ import ChipInput from "./ChipInput";
 import Upload from "../Upload";
 
 const CourseInformationForm = () => {
-
   const {
     register,
     handleSubmit,
@@ -127,11 +124,11 @@ const CourseInformationForm = () => {
           setStep(2);
           dispatch(setCourse(result));
         }
+        console.log("PRINTING FORMDATA", formData);
+        console.log("PRINTING result", result);
       } else {
         toast.error("NO Changes made so far");
       }
-      console.log("PRINTING FORMDATA", formData);
-      console.log("PRINTING result", result);
 
       return;
     }
@@ -154,7 +151,7 @@ const CourseInformationForm = () => {
     formData.forEach((value, key) => {
       console.log(key, value);
     });
-    
+
     const result = await addCourseDetails(formData, token);
     if (result) {
       //console.log(setCourse(result));
@@ -211,7 +208,7 @@ const CourseInformationForm = () => {
             valueAsNumber: true,
           })}
           className="w-full pl-6 pr-3 py-2 rounded-md bg-richblack-700 text-richblack-100"
-          />
+        />
         <HiOutlineCurrencyRupee className="absolute top-[55%] left-1 text-richblack-400" />
         {errors.coursePrice && <span>Course Price is Required**</span>}
       </div>
@@ -242,13 +239,13 @@ const CourseInformationForm = () => {
 
       {/* create a custom component for handling tags input */}
       <ChipInput
-            label="Tags"
-            name="courseTags"
-            placeholder="Enter Tags and press Enter"
-            register={register}
-            errors={errors}
-            setValue={setValue}
-            getValues = {getValues}
+        label="Tags"
+        name="courseTags"
+        placeholder="Enter Tags and press Enter"
+        register={register}
+        errors={errors}
+        setValue={setValue}
+        getValues={getValues}
       />
 
       {/* create a component for uploading and showing preview of media */}
@@ -296,11 +293,7 @@ const CourseInformationForm = () => {
         )}
 
         <div className="flex text-richblack-900 rounded-md px-3 py-1 font-medium items-center text-md bg-yellow-50 w-fit">
-          <button>
-            {
-              !editCourse?"Next" : "Save Changes"
-            }
-          </button>
+          <button>{!editCourse ? "Next" : "Save Changes"}</button>
           <MdNavigateNext />
         </div>
       </div>

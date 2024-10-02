@@ -6,6 +6,7 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { FreeMode, Pagination } from "swiper";
 
+// eslint-disable-next-line
 import Course_Card from "./Course_Card";
 
 const CourseSlider = ({ Courses }) => {

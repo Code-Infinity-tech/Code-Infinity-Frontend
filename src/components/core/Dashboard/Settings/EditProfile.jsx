@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 import { updateProfile } from "../../../../services/operations/SettingsAPI";
-import IconBtn from "../../../common/IconBtn";
+// import IconBtn from "../../../common/IconBtn";
 import { IoIosArrowDown } from "react-icons/io";
 
 const genders = ["Male", "Female", "Non-Binary", "Prefer not to say", "Other"];
@@ -209,8 +209,11 @@ export default function EditProfile() {
           >
             Cancel
           </button>
-          
-          <button type="submit" className="text-[#000814] bg-[#FFD60A] rounded-md px-5">
+
+          <button
+            type="submit"
+            className="text-[#000814] bg-[#FFD60A] rounded-md px-5"
+          >
             Save
           </button>
         </div>

@@ -23,13 +23,13 @@ export const Footer = () => {
               <h4>About</h4>
               <ul>
                 <li>
-                  <a href="">about us</a>
+                  <a href="/">about us</a>
                 </li>
                 <li>
-                  <a href="">our services</a>
+                  <a href="/">our services</a>
                 </li>
                 <li>
-                  <a href="">privacy policy</a>
+                  <a href="/">privacy policy</a>
                 </li>
               </ul>
             </div>
@@ -37,13 +37,13 @@ export const Footer = () => {
               <h4>Get Help</h4>
               <ul>
                 <li>
-                  <a href="">FAQ</a>
+                  <a href="/">FAQ</a>
                 </li>
                 <li>
-                  <a href="">Payments</a>
+                  <a href="/">Payments</a>
                 </li>
                 <li>
-                  <a href="">Courses</a>
+                  <a href="/">Courses</a>
                 </li>
               </ul>
             </div>
@@ -92,7 +92,7 @@ export const Footer = () => {
         >
           <p className="text-white text-2xl my-2  ">© 2024</p>
           <div className=" ">
-            <img src={Logo} alt="" />
+            <img src={Logo} alt="logo" />
           </div>
         </div>
       </footer>
