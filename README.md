@@ -1,6 +1,6 @@
 # Code Infinity - EdTech Platform
 
-# :rocket: [Live Preview](https://code-infinity.vercel.app/)
+# :rocket: [Live Preview](https://code-infinity-web.netlify.app/)
 
 ![Main Page](images/main.jpg)
 
