@@ -34,15 +34,13 @@ export default function SubSectionModal({
   const [loading, setLoading] = useState(false);
   const { token } = useSelector((state) => state.auth);
   const { course } = useSelector((state) => state.course);
-  // eslint-disable-next-line
   useEffect(() => {
     if (view || edit) {
-      // console.log("modalData", modalData)
       setValue("lectureTitle", modalData.title);
       setValue("lectureDesc", modalData.description);
       setValue("lectureVideo", modalData.videoUrl);
     }
-  }, []);
+  }, [view, edit, modalData, setValue]);
 
   // detect whether form is updated or not
   const isFormUpdated = () => {

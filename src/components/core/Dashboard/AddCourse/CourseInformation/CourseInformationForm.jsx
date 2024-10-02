@@ -52,7 +52,7 @@ const CourseInformationForm = () => {
     }
 
     getCategories();
-  }, []);
+  }, [editCourse, course, setValue]);
 
   const isFormUpdated = () => {
     const currentValues = getValues();

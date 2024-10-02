@@ -7,7 +7,7 @@ import "swiper/css/pagination";
 import { FreeMode, Pagination } from "swiper";
 
 // eslint-disable-next-line
-import Course_Card from "./Course_Card";
+import CourseCard from "./CourseCard";
 
 const CourseSlider = ({ Courses }) => {
   return (
@@ -28,7 +28,7 @@ const CourseSlider = ({ Courses }) => {
         >
           {Courses?.map((course, i) => (
             <SwiperSlide key={i}>
-              <Course_Card
+              <CourseCard
                 course={course}
                 Height={"h-[200px] w-[330px] md:w-[450px]  md:h-[280px]"}
               />

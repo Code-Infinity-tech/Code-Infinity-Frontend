@@ -46,11 +46,13 @@ export default function Upload({
 
   useEffect(() => {
     register(name, { required: true });
-  }, [register]);
+  }, [name, register]);
 
   useEffect(() => {
-    setValue(name, selectedFile);
-  }, [selectedFile, setValue]);
+    if (selectedFile) {
+      setValue(name, selectedFile);
+    }
+  }, [name, setValue, selectedFile]);
 
   const handleBrowseClick = () => {
     inputRef.current.click();
